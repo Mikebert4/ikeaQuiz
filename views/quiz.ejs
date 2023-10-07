@@ -2,28 +2,25 @@
 
 <div class="row justify-content-center">
     <div class="col-md-8">
-        <h2>ikeaQuiz</h2>
         <div class="card">
-            <div class="card-header">Quiz Question <%- question.id -%></div>
+            <div class="card-header">Quiz Question <%- id -%></div>
             <div class="card-body">
                 <div class="hero-element">
                     <!-- Your hero content goes here -->
-                    <h3>Hero Element</h3>
-                    <p>This is some hero content.</p>
+                    <h3><%- q.name -%></h3>
+                    <p>Is this IKEA... or is it Metal?!</p>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="clickable-div">
+                        <div class="clickable-div" onclick="optionClick('nordic');">
                             <!-- Content for the first clickable div -->
-                            <h4>Clickable Div 1</h4>
-                            <p>Click me!</p>
+                            <h4>METAL!</h4>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="clickable-div">
+                        <div class="clickable-div" onclick="optionClick('ikea')">
                             <!-- Content for the second clickable div -->
-                            <h4>Clickable Div 2</h4>
-                            <p>Click me too!</p>
+                            <h4>IKEA</h4>
                         </div>
                     </div>
                 </div>
@@ -31,5 +28,10 @@
         </div>
     </div>
 </div>
+<script type='text/javascript'>
+    function optionClick(option) {
+        alert(option == '<%- q['type'] -%>' ? 'Correct!' : 'Wrong!')
+    }
+</script>
 
 <%- include('footer.ejs'); %>

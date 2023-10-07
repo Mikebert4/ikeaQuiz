@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #343a40;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    color: #cfcfcf;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the navigation bar in dark mode */
+  .navbar {
+    background-color: #343a40;
+    color: #fff;
+  }
+  
+  /* Center the navbar brand */
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Style the card in dark mode */
+  .card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #272c32; /* Dark background color for the card */
+    color: #fff; /* Text color in dark mode */
+  }
+  
+  /* Style the card header in dark mode */
+  .card-header {
+    background-color: #343a40;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* Style the hero element in dark mode */
+  .hero-element {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style the clickable divs in dark mode */
+  .clickable-div {
+    background-color: #343a40; /* Dark background color for clickable divs */
+    color: #fff; /* Text color in dark mode */
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add box shadow */
+  }
+  
+  /* Soft orange background color class */
+  .soft-orange-bg {
+    background-color: #ff9800; /* Soft orange background color */
+    color: #fff; /* Text color */
+  }
+  
+  .clickable-div:hover {
+    background-color: #272c32; /* Darker background color on hover */
+  }
+  
+  /* Center align the page content */
+  .container {
+    text-align: center;
+    margin-top: 20px;
+  }
