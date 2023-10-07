@@ -1,0 +1,35 @@
+<%- include('header.ejs'); %>
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h2>ikeaQuiz</h2>
+        <div class="card">
+            <div class="card-header">Quiz Question <%- question.id -%></div>
+            <div class="card-body">
+                <div class="hero-element">
+                    <!-- Your hero content goes here -->
+                    <h3>Hero Element</h3>
+                    <p>This is some hero content.</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="clickable-div">
+                            <!-- Content for the first clickable div -->
+                            <h4>Clickable Div 1</h4>
+                            <p>Click me!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="clickable-div">
+                            <!-- Content for the second clickable div -->
+                            <h4>Clickable Div 2</h4>
+                            <p>Click me too!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('footer.ejs'); %>
