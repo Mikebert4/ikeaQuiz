@@ -3,7 +3,7 @@
 <div class="row justify-content-center">
     <div class="col-md-8">
         <div class="card">
-            <div class="card-header">Quiz Question <%- id -%></div>
+            <div class="card-header">You have answered <%- score  -%> right out of <%- answered -%> tries</div>
             <div class="card-body">
                 <div class="hero-element">
                     <!-- Your hero content goes here -->
@@ -12,13 +12,13 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="clickable-div" onclick="optionClick('nordic');">
+                        <div class="clickable-div" data-answer="nordic" onclick="optionClick(this);">
                             <!-- Content for the first clickable div -->
                             <h4>METAL!</h4>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="clickable-div" onclick="optionClick('ikea')">
+                        <div class="clickable-div" data-answer="ikea" onclick="optionClick(this);">
                             <!-- Content for the second clickable div -->
                             <h4>IKEA</h4>
                         </div>
@@ -28,10 +28,39 @@
         </div>
     </div>
 </div>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="modal-content-container">
+        <!-- Content loaded via AJAX will be placed here -->
+      </div>
+    </div>
+  </div>
 <script type='text/javascript'>
-    function optionClick(option) {
-        alert(option == '<%- q['type'] -%>' ? 'Correct!' : 'Wrong!')
+    function optionClick(element) {
+        var answer = $(element).data('answer');
+        element.attributes.class.value += ' selected';
+        $('#myModal').css('display', 'block');
+
+        // Load content via AJAX and place it in the modal
+        $.ajax({
+            url: '/quiz/getanswer/<%- id -%>/'+answer,
+            type: 'GET',
+            success: function (data) {
+                $('#modal-content-container').html(data);
+        },
+        error: function () {
+            // Handle errors here
+        }
+        });
     }
+
+    $(document).ready(function () {
+        // Close the modal when the close button or overlay is clicked
+        $('.close, .modal').click(function () {
+            $('#myModal').css('display', 'none');
+        });
+    });
 </script>
 
 <%- include('footer.ejs'); %>

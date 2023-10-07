@@ -1,0 +1,23 @@
+<% if (correct) { %>
+    <h2 class="modal-correct">Correct!</h2>
+    <br>
+    <h3 class="modal-correct"><%- q.name %> <%= q.type == "ikea" ? " is an IKEA product!" : " are a Nordic Metal Band" %>!</h3>
+    <br>
+    <img src="images/<%- q.image %>" alt="<%- q.name %>" class="modal-image">
+    <br>
+    <br>
+    <p class="modal-correct"><%- q.description %></p>
+  <% } else { %>
+    <h2 class="modal-incorrect">Nope!</h2>
+    <br>
+    <h3 class="modal-incorrect">Turns out that <%- q.name %> <%= q.type == "ikea" ? " is actually an IKEA product." : " are a Nordic Metal Band" %>!</h3>
+    <p>Who knew?</p>
+    <br>
+    <img src="images/<%- q.image %>" alt="<%- q.name %>" class="modal-image">
+    <br>
+    <br>
+    <p class="modal-incorrect"><%- q.description %></p>
+  <% } %>
+
+    <div class="modal-footer">
+        <button class="btn btn-primary" onclick="window.location.href='/'">Next Question</button>

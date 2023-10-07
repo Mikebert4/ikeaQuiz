@@ -1,100 +1,100 @@
 
 const questions = [
   {
-    name: "Ektorp",
-    type: "ikea",
-    description: "This is a product from Ikea",
-    image: "https://www.ikea.com/us/en/images/products/ektorp-sofa-lofallet-beige__0719190_PE731620_S5.JPG?f=s"
+    "name": "EKTORP",
+    "type": "ikea",
+    "description": "This is a product from Ikea",
+    "image": "ektorp.jpg"
   },
   {
-    name: "LACK",
-    type: "ikea",
-    description: "A simple and affordable coffee table available in various colors.",
-    image: "https://example.com/lack-coffee-table-image.jpg"
+    "name": "AGOTNES",
+    "type": "ikea",
+    "description": "This basic firm foam mattress is 10 cm high. Resilient foam is combined with a soft layer of wadding.",
+    "image": "agotnes.jpg"
   },
   {
-    name: "POÄNG",
-    type: "ikea",
-    description: "A comfortable and stylish armchair available in different finishes.",
-    image: "https://example.com/poang-armchair-image.jpg"
+    "name": "POÄNG",
+    "type": "ikea",
+    "description": "A comfortable and stylish armchair available in different finishes.",
+    "image": "poang.jpg"
   },
   {
-    name: "ADILS",
-    type: "ikea",
-    description: "An affordable desk with a spacious tabletop and adjustable legs.",
-    image: "https://example.com/linnmon-adils-desk-image.jpg"
+    "name": "ADILS",
+    "type": "ikea",
+    "description": "An affordable desk with a spacious tabletop and adjustable legs.",
+    "image": "adils.jpg"
   },
   {
-    name: "KALLAX",
-    type: "ikea",
-    description: "A versatile shelving unit that can be used for storage or as a room divider.",
-    image: "https://example.com/kallax-shelf-unit-image.jpg"
+    "name": "MALÖRTSMOTT",
+    "type": "ikea",
+    "description": "This soft chair pad adds a layer of warmth and cosiness to most types of seating, including benches. Sheepskin look and feel, but made from recycled polyester.",
+    "image": "malortsmott.jpg"
   },
   {
-    name: "ALEX",
-    type: "ikea",
-    description: "A set of drawers for organizing office supplies or other items.",
-    image: "https://example.com/alex-drawer-unit-image.jpg"
+    "name": "ALEX",
+    "type": "ikea",
+    "description": "A set of drawers for organizing office supplies or other items.",
+    "image": "alex.jpg"
   },
   {
-    name: "EKEDALEN",
-    type: "ikea",
-    description: "A dining table with extendable options for accommodating guests.",
-    image: "https://example.com/ekedalen-dining-table-image.jpg"
+    "name": "BLÅSVERK",
+    "type": "ikea",
+    "description": "A lovely blue table lamp.",
+    "image": "blasverk.jpg"
   },
   {
-    name: "RÅSKOG",
-    type: "ikea",
-    description: "A portable cart with multiple shelves, perfect for kitchen or bathroom storage.",
-    image: "https://example.com/raskog-utility-cart-image.jpg"
+    "name": "RÅSKOG",
+    "type": "ikea",
+    "description": "A portable cart with multiple shelves, perfect for kitchen or bathroom storage.",
+    "image": "raskog.jpg"
   },
   {
-    name: "Sigur Rós",
-    type: "nordic",
-    description: "An Icelandic post-rock band known for their ethereal soundscapes.",
-    image: "https://example.com/sigur-ros-image.jpg"
+    "name": "BEHERIT",
+    "type": "nordic",
+    "description": "Beherit is a Finnish black metal band from Rovaniemi. The band was formed in 1989 by Nuclear Holocausto Vengeance, Black Jesus and Sodomatic Slaughter, with the purpose of performing \"the most primitive, savage, hell-obsessed black metal imaginable\". \"Beherit\" is the Syriac word for Satan.",
+    "image": "beherit.jpg"
   },
   {
-    name: "Jónsi & Alex",
-    type: "nordic",
-    description: "An Icelandic ambient and experimental duo consisting of Jónsi Birgisson from Sigur Rós and Alex Somers.",
-    image: "https://example.com/jonsi-alex-image.jpg"
+    "name": "MOKOMA",
+    "type": "nordic",
+    "description": "Mokoma is a Finnish thrash metal band formed in Lappeenranta, Finland, in 1996. Their music also has grindcore and death metal influences with traditional Finnish melancholy.",
+    "image": "mokoma.jpg"
   },
   {
-    name: "Árstíðir",
-    type: "nordic",
-    description: "An Icelandic indie folk band known for their intricate vocal harmonies.",
-    image: "https://example.com/arstidir-image.jpg"
+    "name": "MYRKUR",
+    "type": "nordic",
+    "description": "Myrkur is a Danish black metal band led by singer Amalie Bruun. Myrkur is a solo project within the genre of second-wave black metal. Initially, the real-life identity of the person behind the project was kept unknown.",
+    "image": "myrkur.jpg"
   },
   {
-    name: "Kauan",
-    type: "nordic",
-    description: "A Russian-Ukrainian-Finnish band that blends post-rock with elements of folk and black metal.",
-    image: "https://example.com/kauan-image.jpg"
+    "name": "KAUAN",
+    "type": "nordic",
+    "description": "A Russian-Ukrainian-Finnish band that blends post-rock with elements of folk and black metal.",
+    "image": "kauan.jpg"
   },
   {
-    name: "Wardruna",
-    type: "nordic",
-    description: "A Norwegian folk band that draws inspiration from Norse mythology and ancient rituals.",
-    image: "https://example.com/wardruna-image.jpg"
+    "name": "WARDRUNA",
+    "type": "nordic",
+    "description": "A Norwegian folk band that draws inspiration from Norse mythology and ancient rituals.",
+    "image": "wardruna.jpg"
   },
   {
-    name: "Shining",
-    type: "nordic",
-    description: "A Swedish band that combines elements of jazz, black metal, and avant-garde music.",
-    image: "https://example.com/shining-image.jpg"
+    "name": "KVELERTAK",
+    "type": "nordic",
+    "description": "Kvelertak is a Norwegian heavy metal band from Stavanger, formed in 2007. The group comprises vocalist Ivar Nikolaisen, guitarists Vidar Landa, Bjarte Lund Rolland and Maciek Ofstad, bassist Marvin Nygaard and drummer Håvard Takle Ohr.",
+    "image": "kvelertak.jpg"
   },
   {
-    name: "Moonsorrow",
-    type: "nordic",
-    description: "A Finnish folk metal band with epic and atmospheric compositions.",
-    image: "https://example.com/moonsorrow-image.jpg"
+    "name": "GLITTERTIND",
+    "type": "nordic",
+    "description": "Glittertind is a Norwegian indie folk-rock band, which started up as a one-man project in 2001 featuring Torbjørn Sandvik as the driving force.",
+    "image": "glittertind.jpg"
   },
   {
-    name: "Oranssi Pazuzu",
-    type: "nordic",
-    description: "A Finnish band known for their psychedelic black metal sound.",
-    image: "https://example.com/oranssi-pazuzu-image.jpg"
+    "name": "SKALMÖLD",
+    "type": "nordic",
+    "description": "Skálmöld is a Viking / folk metal band from Reykjavík, Iceland, formed in August 2009. The band's name is literally translated as Age of Swords and also means \"lawlessness\", referring to the Age of the Sturlungs of Icelandic history, when a civil war broke out between the country's family clans",
+    "image": "skalmold.jpg"
   }
 ];
 
