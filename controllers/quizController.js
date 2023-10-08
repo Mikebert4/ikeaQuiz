@@ -11,17 +11,15 @@ exports.showQuiz = (req, res, next) => {
 
   //get a random unanswered question
   function getQuestionId() {
-    const usedQuestionSet = new Set(req.session.usedQuestions);
-
-    let id;
-    do {
-      id = Math.floor(Math.random() * questions.length);
-    } while (usedQuestionSet.has(id));
-
-    //usedQuestionSet.add(id);
-    req.session.usedQuestions = Array.from(usedQuestionSet);
-
-    return id;
+    const questions = q.getQuestions();
+    const answered = req.session.usedQuestions;
+    const unanswered = questions.filter(q => !answered.includes(q.id));
+    if (unanswered.length === 0) {
+      req.session.usedQuestions = [];
+      return getQuestionId();
+    }
+    const random = Math.floor(Math.random() * unanswered.length);
+    return unanswered[random].id;
   }
 
   const answered = req.session.usedQuestions;
