@@ -30,10 +30,18 @@ exports.showQuiz = (req, res, next) => {
     }
   }
   const id = getQuestionId();
-  const question = q.getQuestion(id);
-  const score = getScore(req.session);
-  console.log(score);
-  res.render('quiz', { id: id, q: question, score: score});
+  //console.log("Displaying question: " + id);
+
+  if(id) {
+    //Questions left to answer
+    const question = q.getQuestion(id);
+    const score = getScore(req.session);
+    //console.log(score);
+    res.render('quiz', { id: id, q: question, score: score});
+  }else{
+    //end of questions
+    res.render('end', { score: getScore(req.session) });
+  }
 };
 
 exports.getAnswer = (req, res, next) => {
@@ -48,6 +56,15 @@ exports.getAnswer = (req, res, next) => {
   }
 
   res.render('answermodal', { correct: correct, answer: answer, q: question });
+};
+
+exports.showEnd = (req, res, next) => {
+  res.render('end', { score: getScore(req.session) });
+};
+
+exports.reset = (req, res, next) => {
+  req.session.destroy();
+  res.redirect('/');
 };
 
 

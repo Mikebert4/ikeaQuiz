@@ -24,6 +24,13 @@
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Content for the third clickable div -->
+                        <button class="btn btn-primary float-right" onclick="window.location.href='/'">Next Question</button>
+                        <button class="btn btn-primary float-left" onclick="window.location.href='/reset'">Start Again</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -39,6 +46,10 @@
 <script type='text/javascript'>
     function optionClick(element) {
         var answer = $(element).data('answer');
+        //if either clickable has selected class, do nothing
+        if($('.clickable-div').hasClass('selected')) {
+            return;
+        }
         element.attributes.class.value += ' selected';
         $('#myModal').css('display', 'block');
 

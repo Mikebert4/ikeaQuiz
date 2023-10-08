@@ -60,6 +60,11 @@ body {
     transition: background-color 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add box shadow */
   }
+
+  .clickable {
+    cursor: pointer;
+    color: rgb(106, 252, 106); /* Text color in dark mode */
+  }
   
   /* Soft orange background color class */
   .selected {
@@ -77,6 +82,18 @@ body {
     margin-top: 20px;
   }
 
+  .container-fluid {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .float-right {
+    float: right;
+  }
+
+  .float-left {
+    float: left;
+  }
 
   /* modal */
 
