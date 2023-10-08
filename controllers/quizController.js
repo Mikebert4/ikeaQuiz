@@ -32,7 +32,7 @@ exports.showQuiz = (req, res, next) => {
   const id = getQuestionId();
   //console.log("Displaying question: " + id);
 
-  if(id) {
+  if(id>0) {
     //Questions left to answer
     const question = q.getQuestion(id);
     const score = getScore(req.session);
