@@ -1,6 +1,6 @@
 {
   "name": "ikeaquiz",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "ikeaQuiz",
   "main": "server.js",
   "scripts": {
@@ -11,7 +11,7 @@
   "author": "Stephen Beaton",
   "license": "ISC",
   "engines": {
-    "node": "18.18.0"
+    "node": "^18.18.0"
   },
   "dependencies": {
     "ejs": "^3.1.9",
