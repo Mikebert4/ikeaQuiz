@@ -22,9 +22,11 @@ app.use(express.static(path.join(__dirname,'assets')));
 
 //import routes
 const quizRoutes = require('./routes/quiz');
+const adminRoutes = require('./routes/admin');
 
 //routes
 app.use(quizRoutes);
+app.use(adminRoutes);
 
 //start server 
 app.listen(port, () => console.log('Server running on port '+ port));
