@@ -4,7 +4,10 @@ const q = require('../models/questions.js');
 const questions = q.getQuestions;
 
 function seenBefore(id, session) {
-  return session.answers.includes([id, true]) || session.answers.includes([id, false]);
+  //list of answered questions
+  const answered = session.answers.map((item) => item[0]);
+
+  return answered.includes(id);
 }
 
 function getScore(session) {
@@ -24,6 +27,7 @@ exports.showQuiz = (req, res, next) => {
     if (answered.length === questions.length) {
       return -1;
     } else if (seenBefore(id, req.session)) {
+      //console.log("seen before ("+id+"), getting another");
       return getQuestionId();
     } else {
       return id;
@@ -32,11 +36,11 @@ exports.showQuiz = (req, res, next) => {
   const id = getQuestionId();
   //console.log("Displaying question: " + id);
 
-  if(id>0) {
-    //Questions left to answer
+  //render the quiz question if it exists and the quiz is not over (currently 10 questions)
+  if(id>0 && req.session.answers.length < 10) {
+    //display question
     const question = q.getQuestion(id);
     const score = getScore(req.session);
-    //console.log(score);
     res.render('quiz', { id: id, q: question, score: score});
   }else{
     //end of questions
